@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+public class mains extends UserMainCode {
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		System.out.println("enter digit");
+		double number = scan.nextDouble();
+		findNoDigits(number);
+	}
+}
+class UserMainCode {
+	static String findNoDigits(double digit) {
+		StringBuilder sb = new StringBuilder();
+		String string = String.valueOf(digit);
+		String[] array = string.split("\\.");
+		int len1 = array[0].length();
+		int len2 = array[1].length();
+		sb.append(len1);
+		sb.append(":");
+		sb.append(len2);
+		System.out.println(sb.toString());
+		return sb.toString();
+	}
+}
